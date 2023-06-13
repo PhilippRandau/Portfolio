@@ -1,6 +1,17 @@
-header{
+header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 100px;
+    align-items: center;
+
+    div {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
 }
