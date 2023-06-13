@@ -2,3 +2,23 @@ app-introduction{
     display: flex;
     align-items: center;
 }
+
+app-reach-me{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+app-about-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+app-my-skills{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 300px;
+}

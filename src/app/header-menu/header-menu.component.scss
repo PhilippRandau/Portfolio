@@ -4,14 +4,43 @@ header {
     align-items: center;
 
     div {
-        width: 200px;
+        width: 300px;
         display: flex;
         justify-content: space-between;
+    }
+}
 
-        a {
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
+.sections-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    
+
+    a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        min-width: fit-content;
+        text-align: center;
+        white-space: nowrap;
+        &:hover {
+            color: #00BEE8;
+
         }
     }
+
+    div {
+        width: 55px;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid #4B47FF;
+        border-radius: 3px;
+    }
+}
+
+.skills-underline{
+    align-items: center;
 }

@@ -4,6 +4,14 @@ body{
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 120%;
+  margin-block-start: unset;
+}
+
 .ml{
     margin-left: 120px;
 }
@@ -19,7 +27,7 @@ span {
 
 
 
-// Fonts
+// --------------- Fonts ---------------
 
 /* poppins-300 - latin */
 @font-face {
