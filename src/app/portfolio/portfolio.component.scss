@@ -1,0 +1,79 @@
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+h1 {
+    padding: 0px 40px;
+}
+
+.style-line-left {
+    position: absolute;
+    left: calc(50% - 234px - 100px);
+    width: 100px;
+    height: 0px;
+    border: 2px solid #4B47FF;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-bottom: 70px;
+}
+
+.style-line-right {
+    position: absolute;
+    right: 0;
+    left: calc(50% + 234px);
+    height: 0px;
+    border: 2px solid #4B47FF;
+    margin-bottom: 70px;
+}
+
+
+.project {
+    display: flex;
+    align-items: center;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.project-skills {
+    color: #00BEE8;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+}
+
+.project-buttons {
+    height: 55px;
+    margin-top: 40px;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        padding: 5px 30px;
+        border-radius: 10px;
+        transition: 125ms ease-in-out;
+        text-align: center;
+
+        &:hover {
+            transition: 125ms ease-in-out;
+            background-color: #1CDAE6;
+        }
+    }
+}
+
+.button-live-test {
+    background-color: #4B47FF;
+    border: none;
+}
+
+.button-github {
+    background-color: transparent;
+    border: 1px solid #1CDAE6;
+}

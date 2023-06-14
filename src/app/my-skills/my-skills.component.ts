@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class MySkillsComponent {
   icons = ['angular_icon.svg', 'typescript_icon.svg', 'javascript_icon.svg', 'html5_icon.svg', 'firebase_icon.svg', 'git_icon.svg', 'css3_icon.svg', 'scrum_icon.svg', 'material_design_icon.svg']
-  skills = ['Angular', 'Typescript', 'Javascript', 'Html5', 'Firebase', 'Git', 'Css3', 'Scrum', 'Material design']
+  skills = ['Angular', 'Typescript', 'JavaScript', 'HTML', 'Firebase', 'GIT', 'CSS', 'Scrum', 'Material design']
 }

@@ -1,1 +1,22 @@
-<p>portfolio works!</p>
+<div class="headline">
+    <div class="style-line-left">
+        <div></div>
+    </div>
+    <h1>Portfolio</h1>
+    <div class="style-line-right"></div>
+</div>
+
+<span>This page is a sample of my work - please feel free to try them out.</span>
+
+<div class="project" *ngFor="let project of projects;">
+    <img src="assets/img/{{ project.img }}" alt="project_image">
+    <div class="project-info">
+        <h2>{{ project.name }}</h2>
+        <span class="project-skills">{{ project.skills }}</span>
+        <span>{{ project.info }}</span>
+        <div class="project-buttons">
+            <button class="button-live-test" (click)="liveTestProject()">Live test</button>
+            <button class="button-github" (click)="githubProject()">Github</button>
+        </div>
+    </div>
+</div>

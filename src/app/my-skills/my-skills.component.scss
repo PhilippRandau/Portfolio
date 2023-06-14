@@ -27,15 +27,12 @@
 
 .container-button {
     height: 55px;
-
+    
     button {
         margin-top: 50px;
-        font-size: 16px;
         background-color: #1CDAE6;
         padding: 15px 30px;
         border-radius: 10px;
-        color: white;
-        cursor: pointer;
         transition: 125ms ease-in-out;
         text-align: center;
         border: none;
@@ -56,4 +53,10 @@
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     margin-bottom: 160px;
+}
+
+.bg-color-shape{
+    position: absolute;
+    z-index: -1;
+    margin-bottom: -760px;
 }
