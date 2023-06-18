@@ -33,12 +33,29 @@ h1 {
 .project {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin-top: 100px;
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        h2{
+            text-align: right;
+        }
+        span{
+            text-align: right;
+        }
+    }
+
+    &:nth-child(even) .project-buttons{
+        justify-content: flex-end;
+    }
 }
 
 .project-info {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    width: 500px;
 }
 
 .project-skills {
@@ -46,14 +63,14 @@ h1 {
     font-weight: 400;
     font-size: 23px;
     line-height: 120%;
+    margin-bottom: 20px;
 }
 
 .project-buttons {
     height: 55px;
     margin-top: 40px;
-    max-width: 400px;
     display: flex;
-    justify-content: space-between;
+    gap: 100px;
 
     button {
         padding: 5px 30px;
@@ -66,6 +83,8 @@ h1 {
             background-color: #1CDAE6;
         }
     }
+
+    
 }
 
 .button-live-test {
@@ -76,4 +95,9 @@ h1 {
 .button-github {
     background-color: transparent;
     border: 1px solid #1CDAE6;
+}
+
+.portfolio-introduction{
+    max-width: 1000px;
+    text-align: center;
 }

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #141D2F;
@@ -6,11 +10,11 @@ body {
 
 h1 {
   color: white;
-  font-weight: 700;
-  font-size: 90px;
-  line-height: 120%;
-  margin-block-start: unset;
-  margin-block-end: 70px;
+  font-weight: 700 !important;
+  font-size: 90px !important;
+  line-height: 120% !important;
+  margin-block-start: unset !important;
+  margin-block-end: 70px !important;
 }
 
 h2 {
@@ -204,3 +208,5 @@ button {
   src: url('assets/fonts/poppins-v20-latin-900italic.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

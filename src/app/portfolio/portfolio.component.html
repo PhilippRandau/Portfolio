@@ -6,7 +6,7 @@
     <div class="style-line-right"></div>
 </div>
 
-<span>This page is a sample of my work - please feel free to try them out.</span>
+<span class="portfolio-introduction">In my portfolio, you will find a collection of projects where I have actively tested and improved my skills. These projects serve as a testament to my commitment to continuous improvement and hands-on learning. Explore my portfolio to witness the growth and progress I have made as a frontend developer.</span>
 
 <div class="project" *ngFor="let project of projects;">
     <img src="assets/img/{{ project.img }}" alt="project_image">
@@ -15,8 +15,8 @@
         <span class="project-skills">{{ project.skills }}</span>
         <span>{{ project.info }}</span>
         <div class="project-buttons">
-            <button class="button-live-test" (click)="liveTestProject()">Live test</button>
-            <button class="button-github" (click)="githubProject()">Github</button>
+            <button class="button-live-test" (click)="openPage(project.livetest)">Live test</button>
+            <button class="button-github" (click)="openPage(project.github)">Github</button>
         </div>
     </div>
 </div>

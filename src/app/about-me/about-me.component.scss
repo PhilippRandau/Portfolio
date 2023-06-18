@@ -37,6 +37,11 @@
         display: flex;
         gap: 50px;
     }
+    img{
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
 }
 .bg-color-shape{
     position: absolute;

@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-imprint-dataprotection {
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.copyright {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+}
+
+.reachme-logos {
+    height: 36px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        transition: all 125ms ease-in-out;
+        height: 30px;
+        width: 30px;
+
+        &:hover {
+            transition: all 125ms ease-in-out;
+            width: 36px;
+            height: 36px;
+        }
+    }
+}

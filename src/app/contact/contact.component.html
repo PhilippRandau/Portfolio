@@ -1,0 +1,68 @@
+<div class="contact-headline">
+    <div class="style-line"></div>
+    <h1 class="ml">Contact</h1>
+</div>
+
+<div class="contact-me">
+    <div class="ml contact-text">
+        <h3>Got a problem to solve?</h3>
+        <span>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+            projects with my work.</span>
+        <span>Need a Frontend developer? <b>Contact me!</b> </span>
+    </div>
+
+
+    <form class="mr contact-input" [formGroup]="myFormValid" (submit)="sendMail();" #myForm>
+        <div class="input-container">
+            <input formControlName="name" placeholder="Your name" name="name" #nameField>
+            <div *ngIf="name.invalid && !name.pristine && (name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors?.['required']">
+                    Name is required.
+                </div>
+                <div *ngIf="name.errors?.['minlength']">
+                    Name must be at least 4 characters long.
+                </div>
+            </div>
+
+        </div>
+        <div class="input-container">
+            <input formControlName="email" placeholder="Your email" name="email" #emailField type="email">
+            <div *ngIf="email.invalid && !email.pristine &&(email.dirty || email.touched)" class="alert alert-danger">
+                <div *ngIf="email.errors?.['required']">
+                    Email is required.
+                </div>
+                <div *ngIf="email.errors?.['email']">
+                    No valid email address exp@example.com
+                </div>
+            </div>
+        </div>
+        <div class="input-container">
+            <textarea formControlName="message" minlength="10" placeholder="Your message" type="Your message"
+            message="message" cols="30" rows="10" #messageField></textarea>
+            <div *ngIf="message.invalid && !message.pristine && (message.dirty || message.touched)" class="alert alert-danger">
+                <div *ngIf="message.errors?.['required']">
+                    Your message is empty.
+                </div>
+                <div *ngIf="message.errors?.['minlength']">
+                    Your message must be at least 10 characters long.
+                </div>
+            </div>
+            <div class="container-button">
+                <button [disabled]="!myFormValid.valid" #sendButton>Send message :)</button>
+            </div>
+        </div>
+        
+        <p style="color:white">Form Status: {{ myFormValid.status }}</p>
+    </form>
+
+    <!-- <form class="mr contact-input" ngNativeValidate [formGroup]="myFormValid" (submit)="sendMail();" #myForm>
+        <input formControlName="name" required placeholder="Your name" name="name" #nameField>
+        <input formControlName="email" required placeholder="Your email" name="email" #emailField type="email">
+        <textarea formControlName="message" required minlength="10" placeholder="Your message" type="Your message"
+            name="message" cols="30" rows="10" #messageField></textarea>
+        <div class="container-button">
+            <button [disabled]="!myFormValid.valid" #sendButton>Send message :)</button>
+        </div>
+
+    </form> -->
+</div>
