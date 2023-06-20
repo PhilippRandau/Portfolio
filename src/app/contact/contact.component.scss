@@ -45,16 +45,26 @@ h1 {
     }
 }
 
+
 .contact-text {
     max-width: 800px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+gap: 20px;
+    span {
+        max-width: 800px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+    }
 }
 
 .contact-input {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-width: 650px;
-    min-width: 650px;
+    width: 650px;
     background: none !important;
 
     input {
@@ -89,8 +99,6 @@ h1 {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
-        // max-width: calc(100% - 59px);
-        // min-width: calc(100% - 59px);
         min-height: 80px;
         max-height: 300px;
 
@@ -126,44 +134,22 @@ h1 {
 
 
 .ng-valid {
-
     background: url(./../../assets/img/done.svg);
     background-repeat: no-repeat;
     background-position: 97% 11px;
-
-
-    // &:focus {
-    //     outline: #70E61C;
-    // }
-
-    // &:active {
-    //     border-color: #70E61C;
-    // }
-
     border-color: #70E61C !important;
     outline: #70E61C;
 }
 
 .ng-invalid {
-
     background: url(./../../assets/img/error.svg);
     background-repeat: no-repeat;
     background-position: 97% 11px;
-
-
-    // &:focus {
-    //     outline: #E61C40 !important;
-    // }
-
-    // &:hover {
-    //     border-color: #E61C40 !important;
-    // }
-
     border-color: #E61C40 !important;
     outline: #E61C40;
 }
 
-.ng-pristine{
+.ng-pristine {
     border-color: #4B47FF !important;
     background: none;
 }
@@ -177,9 +163,113 @@ h1 {
         margin-bottom: 5px;
         width: calc(100% - 82px);
     }
+}
+
+.textarea-container {
+    height: 450px;
 
     textarea {
         margin-bottom: 5px;
         width: calc(100% - 82px);
+        resize: vertical;
     }
+}
+
+.back-beginning {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    svg {
+        width: 16px;
+        border: 2px solid white;
+        border-radius: 100%;
+        padding: 10px;
+        transition: 125ms ease-in-out;
+    }
+
+    &:hover svg {
+        path {
+            fill: #1CDAE6;
+            transition: 125ms ease-in-out;
+        }
+
+        border-color: #1CDAE6;
+        transition: 125ms ease-in-out;
+    }
+}
+
+.email-send {
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #141D2F, #4b47ff, #141D2F 60%);
+    background-size: 1500% 1500%;
+    -webkit-animation: send 3s ease-in-out;
+    -moz-animation: send 3s ease-in-out;
+    -o-animation: send 3s ease-in-out;
+    animation: send 3s ease-in-out;
+    background-position: 100% 100%;
+    margin-right: 100px;
+}
+
+@-webkit-keyframes send {
+    0% {
+        background-position: 100% 73%;
+    }
+
+    50% {
+        background-position: 0% 28%
+    }
+
+    100% {
+        background-position: 100% 73%;
+    }
+}
+
+@-moz-keyframes send {
+    0% {
+        background-position: 100% 73%;
+    }
+
+    50% {
+        background-position: 0% 28%
+    }
+
+    100% {
+        background-position: 100% 73%;
+    }
+}
+
+@-o-keyframes send {
+    0% {
+        background-position: 100% 73%;
+    }
+
+    50% {
+        background-position: 0% 28%
+    }
+
+    100% {
+        background-position: 100% 73%;
+    }
+}
+
+@keyframes send {
+    0% {
+        background-position: 100% 73%;
+    }
+
+    50% {
+        background-position: 0% 28%
+    }
+
+    100% {
+        background-position: 100% 73%;
+    }
+}
+
+.contact-shape {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    top: 5200px;
 }

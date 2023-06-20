@@ -2,9 +2,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #141D2F;
 
     div {
-        width: 300px;
         display: flex;
         justify-content: space-between;
     }
@@ -14,7 +17,6 @@ header {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    
 
     a {
         color: white;
@@ -26,9 +28,9 @@ header {
         min-width: fit-content;
         text-align: center;
         white-space: nowrap;
+
         &:hover {
             color: #00BEE8;
-
         }
     }
 
@@ -36,11 +38,15 @@ header {
         width: 55px;
         display: flex;
         justify-content: space-between;
-        border: 2px solid #4B47FF;
+        border: 2px solid transparent;
         border-radius: 3px;
     }
 }
 
-.skills-underline{
+.text-center {
     align-items: center;
+}
+
+.highlight {
+    border: 2px solid #4B47FF !important;
 }

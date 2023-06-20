@@ -18,6 +18,7 @@ h1 {
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     margin-bottom: 70px;
+    z-index: -1;
 }
 
 .style-line-right {
@@ -27,6 +28,7 @@ h1 {
     height: 0px;
     border: 2px solid #4B47FF;
     margin-bottom: 70px;
+    z-index: -1;
 }
 
 
@@ -100,4 +102,18 @@ h1 {
 .portfolio-introduction{
     max-width: 1000px;
     text-align: center;
+}
+
+.portfolio-shape-1{
+    position: absolute;
+    left: 0;
+    top: 3200px;
+    z-index: -1;
+}
+
+.portfolio-shape-2{
+    position: absolute;
+    right: 0;
+    top: 3800px;
+    z-index: -1;
 }

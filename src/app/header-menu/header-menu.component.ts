@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-menu.component.scss']
 })
 export class HeaderMenuComponent {
+  highlightAboutMe = false;
+  highlightMySkills = false;
+  highlightPortfolio = false;
 
+  public hideAllHighlights() {
+    this.highlightAboutMe = false;
+    this.highlightMySkills = false;
+    this.highlightPortfolio = false;
+  }
 }
+

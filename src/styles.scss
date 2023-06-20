@@ -10,11 +10,12 @@ body {
 
 h1 {
   color: white;
-  font-weight: 700 !important;
-  font-size: 90px !important;
-  line-height: 120% !important;
-  margin-block-start: unset !important;
-  margin-block-end: 70px !important;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 120%;
+  margin-block-start: unset;
+  margin-block-end: 70px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif
 }
 
 h2 {
@@ -22,6 +23,7 @@ h2 {
   font-size: 32px;
   line-height: 120%;
   color: #4B47FF;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif
 }
 
 h3 {
@@ -29,6 +31,9 @@ h3 {
   font-size: 32px;
   line-height: 120%;
   color: white;
+  margin-block-start: unset;
+  margin-block-end: unset;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif
 }
 
 .ml {
@@ -41,6 +46,7 @@ h3 {
 
 span {
   color: white;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif
 }
 
 button {
@@ -208,5 +214,13 @@ button {
   src: url('assets/fonts/poppins-v20-latin-900italic.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
