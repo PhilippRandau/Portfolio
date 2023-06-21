@@ -19,6 +19,7 @@ header {
     margin-left: 30px;
 
     a {
+        transition: all 125ms ease-in-out;
         color: white;
         text-decoration: none;
         cursor: pointer;
@@ -35,6 +36,7 @@ header {
     }
 
     div {
+        transition: all 125ms ease-in-out;
         width: 55px;
         display: flex;
         justify-content: space-between;
@@ -48,5 +50,10 @@ header {
 }
 
 .highlight {
-    border: 2px solid #4B47FF !important;
+    transition: all 125ms ease-in-out;
+    color: #00BEE8 !important;
+    div{
+        transition: all 125ms ease-in-out;
+        border: 2px solid #4B47FF !important;
+    }
 }

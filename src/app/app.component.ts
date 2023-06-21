@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
   public aboutMeOffset: number = null;
   public mySkillsOffset: number = null;
   public portfolioOffset: number = null;
-  private headerOffset: number = 120;
+  private headerOffset: number = 110;
   public contactOffset: number = null;
 
   ngAfterViewInit() {
@@ -35,8 +35,6 @@ export class AppComponent implements AfterViewInit {
   @HostListener('document:scroll', ['$event'])
   public onViewportScroll() {
     this.headerMenuComponent.hideAllHighlights();
-    console.log(window.scrollY);
-    console.log('aboutme' + this.aboutMeOffset);
     
     if (window.scrollY >= this.aboutMeOffset - this.headerOffset && window.scrollY < this.mySkillsOffset) {
       this.headerMenuComponent.highlightAboutMe = true;

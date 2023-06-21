@@ -198,9 +198,13 @@ gap: 20px;
     }
 }
 
-.email-send {
+.wrapper-send-message {
     padding: 20px;
     border-radius: 20px;
+    margin-right: 100px;
+}
+
+.send-animation{
     background: linear-gradient(90deg, #141D2F, #4b47ff, #141D2F 60%);
     background-size: 1500% 1500%;
     -webkit-animation: send 3s ease-in-out;
@@ -208,7 +212,6 @@ gap: 20px;
     -o-animation: send 3s ease-in-out;
     animation: send 3s ease-in-out;
     background-position: 100% 100%;
-    margin-right: 100px;
 }
 
 @-webkit-keyframes send {
