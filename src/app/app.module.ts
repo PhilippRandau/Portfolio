@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { ImprintComponent } from './imprint/imprint.component';
+import { HomeComponent } from './home/home.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { CommonModule } from '@angular/common';
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
+    ImprintComponent,
+    HomeComponent,
+    DataProtectionComponent,
 
   ],
   imports: [

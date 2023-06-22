@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { MySkillsComponent } from './my-skills/my-skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { HomeComponent } from './home/home.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 const routes: Routes = [
-  { path: 'about-me-route', component: AboutMeComponent },
-  { path: 'my-skills-route', component: MySkillsComponent },
-  { path: 'portfolio-route', component: PortfolioComponent },
+  { path: '', component:  HomeComponent},
+  { path: 'imprint', component: ImprintComponent },
+  { path: 'data-protection', component: DataProtectionComponent },
 ];
 
 @NgModule({
@@ -17,7 +17,7 @@ const routes: Routes = [
     anchorScrolling: 'enabled',
     scrollOffset: [
       0,
-      104
+      110
   ]
   }
   )],

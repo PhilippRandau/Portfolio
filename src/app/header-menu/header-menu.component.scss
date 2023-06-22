@@ -5,6 +5,7 @@ header {
     position: fixed;
     left: 0;
     right: 0;
+    top: 0;
     background-color: #141D2F;
 
     div {
@@ -41,7 +42,8 @@ header {
         display: flex;
         justify-content: space-between;
         border: 2px solid transparent;
-        border-radius: 3px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
     }
 }
 
