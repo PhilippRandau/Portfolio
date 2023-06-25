@@ -85,8 +85,6 @@ h1 {
             background-color: #1CDAE6;
         }
     }
-
-    
 }
 
 .button-live-test {
@@ -116,4 +114,55 @@ h1 {
     right: 0;
     top: 3800px;
     z-index: -1;
+}
+
+
+@media(max-width:1000px){
+    h2{
+        text-align: center;
+    }
+    .portfolio-shape-1{
+        top: 4400px;
+        left: unset;
+        width: 500px;
+    }
+
+    .portfolio-introduction{
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .project {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: unset;
+        flex-direction: column;
+        h2{
+            text-align: center;
+        }
+        span{
+            text-align: center;
+        }
+        &:nth-child(even) {
+            flex-direction: column;
+            h2{
+                text-align: center;
+            }
+            span{
+                text-align: center;
+            }
+        }
+    }
+
+    .project-info{
+        align-items: center;
+    }
+
+    .project-buttons {
+        justify-content: space-between !important;
+        gap: unset;
+        width: 400px;
+    }
+    
 }

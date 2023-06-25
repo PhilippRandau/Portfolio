@@ -1,4 +1,6 @@
-
+<div class="container-button hide-big-screen">
+    <button [routerLink]="[ '/' ]" fragment="contact">Get in touch</button>
+</div>
 <div id="mySkills" #mySkills class="ml skills-icons">
     <div *ngFor="let icon of icons; let i = index">
         <img src="assets/img/{{ icon }}" alt="skill_icons">
@@ -6,12 +8,16 @@
     </div>
 </div>
 <div class="skills-text">
-    <h1>My skills</h1>
-    <span>During my training, I have learned a range of valuable skills, which I proudly showcase in the portfolio section.</span>
-    <div class="container-button">
+    <div class="style-line-mobile">
+        <h1>My skills</h1>
+        <div class="hide-big-screen"></div>
+    </div>
+    <span>During my training, I have learned a range of valuable skills, which I proudly showcase in the portfolio
+        section.</span>
+    <div class="container-button hide-mobile">
         <button [routerLink]="[ '/' ]" fragment="contact">Get in touch</button>
     </div>
 </div>
 
-<div class="style-line"></div>
+<div class="style-line hide-mobile"></div>
 <img class="bg-color-shape" src="assets/img/shape_behind_myskills.svg" alt="background-color-shape">

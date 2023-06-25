@@ -3,25 +3,29 @@
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 80px 80px 80px; 
+    grid-template-rows: 80px 80px 80px;
     column-gap: 140px;
     row-gap: 70px;
-    div{
+
+    div {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        span{
+
+        span {
             text-align: center;
         }
     }
-    img{
+
+    img {
         transition: 125ms ease-in-out;
-        &:hover{
+
+        &:hover {
             transition: 125ms ease-in-out;
             transform: translateY(-10px);
         }
-        
+
     }
 }
 
@@ -29,7 +33,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    span{
+
+    span {
         max-width: 700px;
         text-align: center;
     }
@@ -37,7 +42,7 @@
 
 .container-button {
     height: 55px;
-    
+
     button {
         margin-top: 50px;
         background-color: #1CDAE6;
@@ -65,8 +70,60 @@
     margin-bottom: 160px;
 }
 
-.bg-color-shape{
+.bg-color-shape {
     position: absolute;
     z-index: -1;
     margin-bottom: -760px;
+}
+
+@media(max-width:1000px) {
+    .style-line-mobile {
+        display: flex;
+        align-items: center;
+
+        div {
+            position: absolute;
+            right: 0;
+            width: 70px;
+            height: 0px;
+            border: 2px solid #4B47FF;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            margin-bottom: 70px;
+        }
+    }
+
+    .skills-icons {
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 80px 80px 80px;
+        column-gap: 120px;
+        row-gap: 70px;
+
+        img {
+            &:hover {
+                transform: translateY(0px);
+            }
+
+            width: 56px;
+            object-fit: contain;
+        }
+    }
+
+    .skills-text {
+        align-items: flex-end;
+
+        span {
+            max-width: 700px;
+            text-align: right;
+        }
+    }
+
+    .container-button {
+        margin-top: 100px;
+    }
+
+    .bg-color-shape {
+        margin-bottom: -650px;
+        left: 0;
+    }
 }

@@ -276,3 +276,41 @@ gap: 20px;
     z-index: -1;
     top: 5200px;
 }
+
+.contact-shape-2{
+    position: absolute;
+    right: -550px;
+    width: 800px;
+    top: 5800px;
+    transform: rotate(65deg);
+}
+
+@media(max-width:1000px){
+    .style-line{
+        width: 50px;
+    }
+    .contact-me{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-text{
+        margin: 0px 50px;
+        padding: 0px 20px;
+    }
+
+    .wrapper-right{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .wrapper-send-message{
+        margin-right: unset;
+        // width: 100%;
+        margin:  0px 50px;
+       }
+
+       .contact-input{
+        width: unset;
+       }
+}

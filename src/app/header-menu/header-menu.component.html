@@ -1,6 +1,6 @@
 <header>
     <a href="index.html">
-        <svg class="ml" width="140" height="100" viewBox="-50 0 400 100" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ml" width="180" height="100" viewBox="-10 0 400 100" xmlns="http://www.w3.org/2000/svg">
             <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="12pt" stroke="white" stroke-width="5"
                 fill="white" style="stroke:white;stroke-width:5;fill:white">
                 <path
@@ -27,10 +27,7 @@
         </svg>
     </a>
 
-
-
-
-    <div class="mr">
+    <div class="mr hide-mobile">
         <div class="sections-wrapper">
             <a [ngClass]="{'highlight': highlightAboutMe}" [routerLink]="[ '/' ]" fragment="aboutMe">About me
                 <div></div>
@@ -47,6 +44,38 @@
                 <div></div>
             </a>
         </div>
+        <div class="sections-wrapper">
+            <a [ngClass]="{'highlight': highlightContact}" [routerLink]="[ '/' ]" fragment="contact">Contact
+                <div></div>
+            </a>
+        </div>
 
     </div>
+
+    <!-- Mobile menu -->
+
+    <div (click)="toggleMenu()" *ngIf="openMenu == false" class="mr hide-big-screen open-burger-menu"></div>
+    <div (click)="toggleMenu()" *ngIf="openMenu == true" class="mr hide-big-screen close-burger-menu"></div>
 </header>
+<div class="mobile-menu hide-big-screen" *ngIf="openMenu == true">
+    <div class="sections-wrapper">
+        <a [ngClass]="{'highlight': highlightAboutMe}" [routerLink]="[ '/' ]" fragment="aboutMe">About me
+            <div></div>
+        </a>
+    </div>
+    <div class="sections-wrapper text-center">
+        <a [ngClass]="{'highlight': highlightMySkills}" [routerLink]="[ '/' ]" fragment="mySkills">Skills
+            <div></div>
+        </a>
+    </div>
+    <div class="sections-wrapper">
+        <a [ngClass]="{'highlight': highlightPortfolio}" [routerLink]="[ '/' ]" fragment="portfolio">Portfolio
+            <div></div>
+        </a>
+    </div>
+    <div class="sections-wrapper">
+        <a [ngClass]="{'highlight': highlightContact}" [routerLink]="[ '/' ]" fragment="contact">Contact
+            <div></div>
+        </a>
+    </div>
+</div>

@@ -49,3 +49,9 @@
     margin-top: -500px;
     z-index: -1;
 }
+
+@media (max-width:1000px){
+    .container-personal-text{
+        margin-left: unset;
+    }
+}

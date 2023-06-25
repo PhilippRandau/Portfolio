@@ -1,20 +1,21 @@
 app-introduction{
     display: flex;
     align-items: center;
-    height: calc(85vh - 100px);
+    height: calc(80vh - 107px);
+    margin-top: 107px;
 }
 
 app-reach-me{
     display: flex;
     justify-content: space-between;
-    height: 15vh;
+    height: 20vh;
 }
 
 app-about-me{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 300px;
 }
 
 app-my-skills{
@@ -39,10 +40,34 @@ app-contact{
 
 app-footer{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 300px;
     border-top: 4px #00BEE8 solid;
     margin-top: 100px;
     background-color: #141D2F;
+}
+
+@media (max-width:1000px){
+    app-introduction{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    app-reach-me{
+        justify-content: center;
+    }
+
+    app-about-me{
+        justify-content: center;
+    }
+
+    app-my-skills{
+        flex-direction: column-reverse;
+    }
+
+    app-footer{
+        flex-direction: column;
+        height: 450px;
+    }
 }
