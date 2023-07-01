@@ -11,10 +11,7 @@ export class HeaderMenuComponent {
   highlightPortfolio = false;
   highlightContact = false;
   openMenu = false;
-<<<<<<< HEAD
   slideOut = false;
-=======
->>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
 
   public hideAllHighlights() {
     this.highlightAboutMe = false;
@@ -23,7 +20,6 @@ export class HeaderMenuComponent {
     this.highlightContact = false;
   }
 
-<<<<<<< HEAD
   delayCloseMenu() {
     setTimeout(() => {
       this.toggleMenu();
@@ -40,10 +36,6 @@ export class HeaderMenuComponent {
       this.slideOut = false;
       this.openMenu = !this.openMenu;
     }
-=======
-  toggleMenu() {
-    this.openMenu = !this.openMenu;
->>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
   }
 }
 

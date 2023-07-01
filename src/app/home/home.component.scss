@@ -9,16 +9,6 @@ app-reach-me{
     display: flex;
     justify-content: space-between;
     height: 20vh;
-<<<<<<< HEAD
-=======
-}
-
-app-about-me{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 300px;
->>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
 }
 
 app-my-skills{
@@ -41,19 +31,6 @@ app-contact{
     margin-top: 300px;
 }
 
-<<<<<<< HEAD
-=======
-app-footer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 300px;
-    border-top: 4px #00BEE8 solid;
-    margin-top: 100px;
-    background-color: #141D2F;
-}
-
->>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
 @media (max-width:1000px){
     app-introduction{
         flex-direction: column;
@@ -71,12 +48,4 @@ app-footer{
     app-my-skills{
         flex-direction: column-reverse;
     }
-<<<<<<< HEAD
-=======
-
-    app-footer{
-        flex-direction: column;
-        height: 450px;
-    }
->>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
 }
