@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 const routes: Routes = [
-  { path: '', component:  HomeComponent},
+  { path: '', component: HomeComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'data-protection', component: DataProtectionComponent },
 ];
@@ -13,12 +13,13 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(
     routes, {
+    scrollPositionRestoration: 'enabled',
     enableTracing: false,
     anchorScrolling: 'enabled',
     scrollOffset: [
       0,
       110
-  ]
+    ]
   }
   )],
   exports: [RouterModule]

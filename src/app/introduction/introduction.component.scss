@@ -1,14 +1,8 @@
 .img-profile {
-    width: 646px;
-    height: 705px;
+    width: 550px;
     margin-left: 120px;
-
-    // delete
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px red dotted;
-    color: white;
+    margin-right: 120px;
+    object-fit: contain;
 }
 
 .text-introduction {
@@ -37,6 +31,7 @@
 
 .container-button {
     height: 55px;
+
     button {
         background-color: #1CDAE6;
         padding: 15px 30px;
@@ -77,13 +72,70 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 100px;
+    top: 300px;
     z-index: -1;
     width: 100%;
 }
 
 .bg-color-shape {
     position: absolute;
-    left: 0;
+    left: -90px;
     z-index: -1;
+    height: 910px;
+}
+
+.bg-shape-mobile {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 500px;
+    z-index: -1;
+    width: 100%;
+}
+
+@media(max-width:1800px) {
+    .name{
+        font-size: 74px;
+    }
+
+    .job{
+        font-size: 36px;
+    }
+}
+
+@media(max-width:1000px) {
+    .img-profile {
+        margin-right: 60px;
+        margin-left: 60px;
+        width: unset;
+    }
+
+    .container-name-job {
+        margin-left: 10px;
+    }
+
+    .bg-color-shape {
+        left: unset;
+        height: unset;
+        width: 500px;
+        top: 0px;
+    }
+
+    .name {
+        font-size: 44px;
+    }
+
+    .job {
+        font-size: 28px;
+    }
+
+    .iam {
+        font-size: 28px;
+    }
+
+    .container-button {
+        button{
+            font-size: 16px;
+        }
+    }
 }

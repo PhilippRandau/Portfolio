@@ -49,11 +49,9 @@ h3 {
   margin-right: 120px;
 }
 
-span, p, li {
-  color: white;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif
-}
-
+span,
+p,
+li,
 a {
   color: white;
   font-family: 'Poppins', Arial, Helvetica, sans-serif
@@ -67,21 +65,66 @@ button {
   cursor: pointer;
 }
 
-app-imprint{
+app-imprint {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-app-footer{
+app-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 300px;
   border-top: 4px #00BEE8 solid;
   margin-top: 100px;
   background-color: #141D2F;
+}
+
+@media(max-width:1800px) {
+  h1{
+    font-size: 74px;
+  }
+}
+
+@media(max-width:1400px) {
+  h1{
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  h1{
+    font-size: 45px;
+  }
+
+  .ml {
+    margin-left: 60px;
+  }
+
+  .mr {
+    margin-right: 60px;
+  }
+
+  .style-line-width{
+    width: 51px !important;
+  }
+
+  app-footer {
+    flex-direction: column;
+    height: 450px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hide-big-screen {
+    display: none !important;
+  }
 }
 
 
@@ -241,3 +284,24 @@ app-footer{
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #4b47ff #223252;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #223252;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #4b47ff;
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}

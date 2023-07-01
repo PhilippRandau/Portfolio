@@ -10,7 +10,7 @@ import { ContactComponent } from '../contact/contact.component'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent  implements AfterViewInit {
+export class HomeComponent implements AfterViewInit {
   @ViewChild(AboutMeComponent) aboutMeComponent!: AboutMeComponent;
   @ViewChild(MySkillsComponent) mySkillsComponent!: MySkillsComponent;
   @ViewChild(PortfolioComponent) portfolioComponent!: PortfolioComponent;
@@ -33,16 +33,15 @@ export class HomeComponent  implements AfterViewInit {
   @HostListener('document:scroll', ['$event'])
   public onViewportScroll() {
     this.headerMenuComponent.hideAllHighlights();
-    console.log(window.scrollY);
-    console.log(this.aboutMeOffset);
-    
-    
+
     if (window.scrollY >= this.aboutMeOffset - this.headerOffset && window.scrollY < this.mySkillsOffset) {
       this.headerMenuComponent.highlightAboutMe = true;
     } else if (window.scrollY >= this.mySkillsOffset && window.scrollY < this.portfolioOffset) {
       this.headerMenuComponent.highlightMySkills = true;
     } else if (window.scrollY >= this.portfolioOffset && window.scrollY < this.contactOffset) {
       this.headerMenuComponent.highlightPortfolio = true;
+    } else if (window.scrollY >= this.contactOffset) {
+      this.headerMenuComponent.highlightContact = true;
     } else {
       this.headerMenuComponent.hideAllHighlights();
     }

@@ -63,4 +63,27 @@
     font-weight: 400;
     font-size: 23px;
     line-height: 120%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width:1000px) {
+    .style-line {
+        position: absolute;
+        left: 0;
+        width: 70px;
+    }
+
+    .sozial {
+        justify-content: center;
+    }
+
+    .reachme-logos {
+        gap: 50px;
+
+        &:hover img {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
