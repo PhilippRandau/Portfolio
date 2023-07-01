@@ -19,6 +19,7 @@ h1 {
 .contact-me {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 
@@ -272,11 +273,26 @@ h1 {
     }
 }
 
-.contact-shape-2 {
+.container-contact-shape-1 {
+    position: relative;
+}
+
+.contact-shape-1 {
     position: absolute;
     right: 0px;
-    width: 250px;
-    top: 5800px;
+    width: 300px;
+    top: -650px;
+}
+
+.container-contact-shape-2 {
+    position: relative;
+}
+
+.contact-shape-2 {
+    position: absolute;
+   left: 0px;
+    width: 500px;
+    bottom: 0px;
 }
 
 @media(max-width:1400px) {
@@ -307,10 +323,14 @@ h1 {
         width: unset;
     }
 
-    .contact-headline{
-        h1{
+    .contact-headline {
+        h1 {
             margin-left: 5px;
         }
+    }
+
+    .contact-shape-2{
+        width: 300px;
     }
 }
 
@@ -337,9 +357,15 @@ h1 {
         width: unset;
     }
 
-    .contact-headline{
-        h1{
+    .contact-headline {
+        h1 {
             margin-left: 5px;
         }
+    }
+}
+
+@media(max-width:1000px) {
+    .contact-shape-2{
+        width: 200px;
     }
 }

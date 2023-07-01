@@ -1,7 +1,12 @@
+.img-profile-container {
+    margin-left: 120px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .img-profile {
     width: 550px;
-    margin-left: 120px;
-    margin-right: 120px;
     object-fit: contain;
 }
 
@@ -27,6 +32,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 80px;
+    margin-bottom: 150px;
 }
 
 .container-button {
@@ -68,20 +75,22 @@
     line-height: 120%;
 }
 
+.bg-shape-container {
+    position: relative;
+}
+
 .bg-shape {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 300px;
+    left: 0px;
+    top: -250px;
     z-index: -1;
-    width: 100%;
+    width: 100vw;
 }
 
 .bg-color-shape {
     position: absolute;
-    left: -90px;
-    z-index: -1;
-    height: 910px;
+    z-index: -2;
+    width: 200%;
 }
 
 .bg-shape-mobile {
@@ -94,11 +103,11 @@
 }
 
 @media(max-width:1800px) {
-    .name{
+    .name {
         font-size: 74px;
     }
 
-    .job{
+    .job {
         font-size: 36px;
     }
 }
@@ -107,7 +116,16 @@
     .img-profile {
         margin-right: 60px;
         margin-left: 60px;
-        width: unset;
+        width: 400px;
+    }
+
+    .img-profile-container{
+        margin-left: unset;
+    }
+
+    .container{
+        margin-left: unset;
+        margin-bottom: unset;
     }
 
     .container-name-job {
@@ -134,7 +152,7 @@
     }
 
     .container-button {
-        button{
+        button {
             font-size: 16px;
         }
     }

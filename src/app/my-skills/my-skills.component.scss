@@ -72,10 +72,15 @@
     right: 0;
 }
 
+.container-bg-color-shape{
+    position: relative;
+}
+
 .bg-color-shape {
     position: absolute;
     z-index: -1;
-    margin-bottom: -760px;
+    left: 0;
+    top: -100px;
 }
 
 @media(max-width:1800px) {

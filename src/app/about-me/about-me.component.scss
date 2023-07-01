@@ -1,3 +1,10 @@
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 300px;
+}
+
 .container-profile-img2 {
     display: flex;
     align-items: center;
@@ -46,10 +53,14 @@
     }
 }
 
+.container-bg-color-shape{
+    position: relative;
+}
+
 .bg-color-shape {
     position: absolute;
+    top: -400px;
     right: 0;
-    margin-top: -500px;
     z-index: -1;
 }
 
