@@ -54,27 +54,48 @@
 
     <!-- Mobile menu -->
 
+<<<<<<< HEAD
     <div (click)="toggleMenu()" *ngIf="!openMenu" class="mr hide-big-screen open-burger-menu"></div>
     <div (click)="toggleMenu()" *ngIf="openMenu" class="mr hide-big-screen close-burger-menu"></div>
 </header>
 <div class="mobile-menu hide-big-screen" [ngClass]="{'menu-slide-out': slideOut}" *ngIf="openMenu == true">
     <div class="sections-wrapper">
         <a (click)="delayCloseMenu()" [ngClass]="{'highlight': highlightAboutMe}" [routerLink]="[ '/' ]" fragment="aboutMe">About me
+=======
+    <div (click)="toggleMenu()" *ngIf="openMenu == false" class="mr hide-big-screen open-burger-menu"></div>
+    <div (click)="toggleMenu()" *ngIf="openMenu == true" class="mr hide-big-screen close-burger-menu"></div>
+</header>
+<div class="mobile-menu hide-big-screen" *ngIf="openMenu == true">
+    <div class="sections-wrapper">
+        <a [ngClass]="{'highlight': highlightAboutMe}" [routerLink]="[ '/' ]" fragment="aboutMe">About me
+>>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
             <div></div>
         </a>
     </div>
     <div class="sections-wrapper text-center">
+<<<<<<< HEAD
         <a (click)="delayCloseMenu()" [ngClass]="{'highlight': highlightMySkills}" [routerLink]="[ '/' ]" fragment="mySkills">Skills
+=======
+        <a [ngClass]="{'highlight': highlightMySkills}" [routerLink]="[ '/' ]" fragment="mySkills">Skills
+>>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
             <div></div>
         </a>
     </div>
     <div class="sections-wrapper">
+<<<<<<< HEAD
         <a (click)="delayCloseMenu()" [ngClass]="{'highlight': highlightPortfolio}" [routerLink]="[ '/' ]" fragment="portfolio">Portfolio
+=======
+        <a [ngClass]="{'highlight': highlightPortfolio}" [routerLink]="[ '/' ]" fragment="portfolio">Portfolio
+>>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
             <div></div>
         </a>
     </div>
     <div class="sections-wrapper">
+<<<<<<< HEAD
         <a (click)="delayCloseMenu()" [ngClass]="{'highlight': highlightContact}" [routerLink]="[ '/' ]" fragment="contact">Contact
+=======
+        <a [ngClass]="{'highlight': highlightContact}" [routerLink]="[ '/' ]" fragment="contact">Contact
+>>>>>>> 6af6012f683f739a2e30b8e72a0e022fb7e95e3c
             <div></div>
         </a>
     </div>
