@@ -82,9 +82,10 @@
 .bg-shape {
     position: absolute;
     left: 0px;
-    top: -250px;
+    right: 0;
+    top: 325px;
     z-index: -1;
-    width: 100vw;
+    width: 100%;
 }
 
 .bg-color-shape {
@@ -97,35 +98,79 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 500px;
+    top: 700px;
     z-index: -1;
     width: 100%;
 }
 
 @media(max-width:1800px) {
+    .container-name-job {
+        margin-left: 20px;
+    }
+
     .name {
-        font-size: 74px;
+        font-size: 72px;
     }
 
     .job {
         font-size: 36px;
     }
+
+    .iam {
+        font-size: 48px;
+    }
+
+    .container {
+        margin-left: 40px;
+    }
+
+    .img-profile {
+        width: 450px;
+    }
 }
 
-@media(max-width:1000px) {
-    .img-profile {
-        margin-right: 60px;
-        margin-left: 60px;
-        width: 400px;
+@media(max-width:1400px) {
+    .name {
+        font-size: 62px;
+    }
+
+    .job {
+        font-size: 32px;
+    }
+
+    .container {
+        margin-left: unset;
+        margin-bottom: unset;
+    }
+
+    .bg-shape {
+        display: none;
+    }
+
+    .bg-shape-mobile{
+        display: block !important;
+        top: 565px;
     }
 
     .img-profile-container{
         margin-left: unset;
     }
 
-    .container{
+}
+
+@media(max-width:1000px) {
+    .img-profile {
+        margin-right: 60px;
+        margin-left: 60px;
+        width: 300px;
+    }
+
+    .img-profile-container {
         margin-left: unset;
-        margin-bottom: unset;
+    }
+
+    .bg-shape-mobile {
+        top: 400px;
     }
 
     .container-name-job {
@@ -155,5 +200,46 @@
         button {
             font-size: 16px;
         }
+    }
+}
+
+@media(max-width:600px) {
+    .img-profile {
+        margin-right: unset;
+        margin-left: unset;
+        width: 200px;
+        // margin-top: 100px;
+    }
+
+    .bg-shape-mobile {
+        top: 330px;
+    }
+
+    .bg-color-shape {
+        width: 310px;
+        top: -20px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .job {
+        font-size: 22px;
+    }
+
+    .iam {
+        font-size: 24px;
+    }
+
+    .text-introduction {
+        margin-bottom: 10px;
+    }
+
+    .container-button {
+        button {
+            padding: 10px 30px;
+        }
+
     }
 }

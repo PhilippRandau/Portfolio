@@ -32,9 +32,16 @@ export class HomeComponent implements AfterViewInit {
 
   @HostListener('document:scroll', ['$event'])
   public onViewportScroll() {
+    this.ngAfterViewInit();
     this.headerMenuComponent.hideAllHighlights();
+    console.log(window.scrollY)
+    console.log('headeroffset '+this.headerOffset);
+    console.log('aboutme '+this.aboutMeOffset);
+    console.log('mySkillsOffset '+this.mySkillsOffset);
+    console.log('portfolioOffset '+this.portfolioOffset);
+    console.log('contactOffset '+this.contactOffset);
 
-    if (window.scrollY >= this.aboutMeOffset - this.headerOffset && window.scrollY < this.mySkillsOffset) {
+    if (window.scrollY >= this.aboutMeOffset && window.scrollY < this.mySkillsOffset) {
       this.headerMenuComponent.highlightAboutMe = true;
     } else if (window.scrollY >= this.mySkillsOffset && window.scrollY < this.portfolioOffset) {
       this.headerMenuComponent.highlightMySkills = true;

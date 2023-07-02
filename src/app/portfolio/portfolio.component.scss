@@ -104,7 +104,7 @@ h1 {
     text-align: center;
 }
 
-.container-portfolio-shape-1{
+.container-portfolio-shape-1 {
     position: relative;
     width: 100%;
 }
@@ -157,10 +157,14 @@ h1 {
         margin-left: 60px;
     }
 
+    .container-portfolio-shape-1 {
+        display: flex;
+        justify-content: center;
+    }
+
     .portfolio-shape-1 {
-        top: 0px;
-        left: 50vw;
-        width: 400px;
+        top: -150px;
+        width: 550px;
     }
 
     .portfolio-introduction {
@@ -207,11 +211,55 @@ h1 {
         width: 400px;
     }
 
+    .style-line-left {
+        position: inherit;
+        width: 51px;
+    }
+
+    .style-line-right {
+        left: calc(50% + 130px);
+    }
+
+    h1 {
+        padding: 0px 5px;
+    }
+
 }
 
 @media (max-width:600px) {
+
+    .portfolio-introduction {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .project {
+        margin-right: unset;
+        margin-left: unset;
+
+        img {
+            width: 310px;
+        }
+    }
+
+    .project-info{
         margin-right: 20px;
         margin-left: 20px;
+    }
+
+    .project-buttons {
+        button {
+            font-size: 22px;
+            padding: 5px 20px;
+        }
+
+        gap: 10px;
+        width: unset;
+    }
+
+
+    .portfolio-shape-1 {
+        width: 310px;
+        top: -20px;
     }
 }

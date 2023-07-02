@@ -4,21 +4,24 @@
 <div class="container-button hide-big-screen">
     <button [routerLink]="[ '/' ]" fragment="contact">Get in touch</button>
 </div>
-<div id="mySkills" #mySkills class="ml skills-icons">
-    <div *ngFor="let icon of icons; let i = index">
-        <img src="assets/img/{{ icon }}" alt="skill_icons">
-        <span>{{skills[i]}}</span>
+<section id="mySkills" #mySkills class="skills-wrapper">
+    <div class="ml skills-icons">
+        <div *ngFor="let icon of icons; let i = index">
+            <img src="assets/img/{{ icon }}" alt="skill_icons">
+            <span>{{skills[i]}}</span>
+        </div>
     </div>
-</div>
-<div class="ml mr skills-text">
-    <div class="style-line-mobile">
-        <h1>My skills</h1>
-        <div class="hide-big-screen"></div>
+    <div class="ml mr skills-text">
+        <div class="style-line">
+            <h1>My skills</h1>
+            <div></div>
+        </div>
+        <span>During my training, I have learned a range of valuable skills, which I proudly showcase in the portfolio
+            section.</span>
+        <div class="container-button hide-mobile">
+            <button [routerLink]="[ '/' ]" fragment="contact">Get in touch</button>
+        </div>
     </div>
-    <span>During my training, I have learned a range of valuable skills, which I proudly showcase in the portfolio
-        section.</span>
-    <div class="container-button hide-mobile">
-        <button [routerLink]="[ '/' ]" fragment="contact">Get in touch</button>
-    </div>
-</div>
-<div class="style-line style-line-width hide-mobile"></div>
+</section>
+
+

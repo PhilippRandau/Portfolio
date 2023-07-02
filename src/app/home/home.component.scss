@@ -14,7 +14,6 @@ app-reach-me{
 app-my-skills{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-top: 300px;
 }
 
@@ -30,12 +29,14 @@ app-contact{
     flex-direction: column;
     margin-top: 300px;
 }
-
-@media (max-width:1000px){
+@media (max-width:1400px){
     app-introduction{
         flex-direction: column;
         gap: 50px;
     }
+}
+
+@media (max-width:1000px){
 
     app-reach-me{
         justify-content: center;
@@ -47,5 +48,12 @@ app-contact{
 
     app-my-skills{
         flex-direction: column-reverse;
+    }
+
+}
+
+@media (max-width:600px){
+    app-introduction{
+        gap: 10px;
     }
 }

@@ -1,15 +1,27 @@
-h1{
+h1 {
     margin-block-start: 70px !important;
 }
 
-.data-protection-wrapper{
+.data-protection-wrapper {
     margin-top: 100px;
     overflow-y: auto;
 }
 
-.data-protection-shape{
+.data-protection-shape {
     position: absolute;
     right: 0;
     top: 1000px;
     z-index: -1;
+}
+
+@media (max-width:600px) {
+    .data-protection-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    a,p,h1,h2,h3{
+        text-align: center;
+    }
 }

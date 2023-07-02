@@ -1,8 +1,3 @@
-html,
-body {
-  height: 100%;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -110,10 +105,6 @@ app-footer {
     margin-right: 60px;
   }
 
-  .style-line-width{
-    width: 51px !important;
-  }
-
   app-footer {
     flex-direction: column;
     height: 450px;
@@ -125,6 +116,19 @@ app-footer {
     display: none !important;
   }
 }
+
+
+@media (max-width: 400px) {
+
+  .ml {
+    margin-left: 20px;
+  }
+  
+  .mr {
+    margin-right: 20px;
+  }
+}
+
 
 
 // --------------- Fonts ---------------
