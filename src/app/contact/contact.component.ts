@@ -28,7 +28,7 @@ export class ContactComponent {
 
 
   async sendMail() {
-    console.log('sendmail', this.myForm);
+    
 
     let nameField = this.nameField.nativeElement;
     let emailField = this.nameField.nativeElement;
@@ -42,24 +42,27 @@ export class ContactComponent {
     
     this.emailSend = true;
 
-    let formData = new FormData();
-    formData.append('name', nameField.value);
-    formData.append('email', emailField.value);
-    formData.append('message', messageField.value);
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    // formData.append('email', emailField.value);
+    fd.append('message', messageField.value);
+    console.log('sendmail', this.myForm);
+    console.log(fd);
+  
     // senden
-    await fetch("https://philipp-randau.developerakademie.net/Send_Mail/send_mail.php"),
+    await fetch("https://philipp-randau.developerakademie.net/send_mail/send_mail.php"),
     {
       method: 'POST',
-      body: formData
+      body: fd
     }
     // Text anzeigen: Nachricht gesendet
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
     sendButton.disabled = false;
-    this.sendButtonVal = 'Message send finished :)';
-    nameField.value = '';
-    emailField.value = '';
-    messageField.value = '';
+    this.sendButtonVal = 'Message was send :)';
+    // nameField.value = '';
+    // emailField.value = '';
+    // messageField.value = '';
   }
 }
