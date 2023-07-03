@@ -24,6 +24,22 @@
     color: white;
 }
 
+.blur{
+    animation: blurAnim 500ms ease-in-out;
+}
+
+@keyframes blurAnim {
+    0%{
+        filter: blur(0px);
+    }
+    50%{
+        filter: blur(5px);
+    }
+    100%{
+        filter: blur(0px);
+    }
+}
+
 .line-profile-img2 {
     border: 2px solid #00BEE8;
     height: 0px;

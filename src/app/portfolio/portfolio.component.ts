@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,16 +6,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+
+  @ViewChild('projects', { static: false }) private projectsElement: ElementRef<HTMLDivElement>;
+  isProjectsElementScrolledIntoView: boolean;
+
   @ViewChild('portfolio') portfolioElement!: ElementRef;
   projects = [
-    // {
-    //   name: 'Pokédex',
-    //   skills: 'JavaScript | HTML | CSS | API',
-    //   info: 'A digital platform designed to provide information about different species of Pokémon.',
-    //   img: 'sample_portfolio.svg',
-    //   github: 'https://github.com/PhilippRandau/Pokedex',
-    //   livetest: 'https://philipp-randau.developerakademie.net/Pokedex/index.html'
-    // },
     {
       name: 'Join',
       skills: 'JavaScript | HTML | CSS',
@@ -34,7 +30,19 @@ export class PortfolioComponent {
     },
   ]
 
-  openPage(link:string) {
+  openPage(link: string) {
     window.location.href = link;
+  }
+
+
+  @HostListener('window:scroll', ['$event'])
+  isScrolledIntoView() {
+    if (this.projectsElement) {
+      const rect = this.projectsElement.nativeElement.getBoundingClientRect();
+      const topShown = rect.top >= 0;
+      const bottomShown = rect.bottom <= window.innerHeight;
+      this.isProjectsElementScrolledIntoView = topShown && bottomShown;
+      console.log(this.isProjectsElementScrolledIntoView);
+    }
   }
 }

@@ -3,6 +3,7 @@
     align-items: flex-end;
 }
 
+
 .sozial {
     display: flex;
     justify-content: space-between;
@@ -65,6 +66,20 @@
     line-height: 120%;
     display: flex;
     justify-content: flex-end;
+    animation: scrollAnim 1s ease-in-out;
+    animation-delay: 750ms;
+}
+
+@keyframes scrollAnim {
+    0% {
+        transform: translateY(0px);
+    }
+    35% {
+        transform: translateY(-30vh);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @media (max-width:1000px) {

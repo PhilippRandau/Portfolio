@@ -201,6 +201,39 @@ h1 {
         }
     }
 
+    .slideInLeft{
+        // animation: slideInLAnim 1s ease-in-out !important;
+        span{
+            color: green;
+        }
+    }
+
+    .slideInRight{
+        // animation: slideInRAnim 1s ease-in-out !important;
+        background-color: #00BEE8;
+        span{
+            color: yellow;
+        }
+    }
+
+    @keyframes slideInLAnim {
+        0%{
+            transform: translateX(-100vw);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRAnim {
+        0%{
+            transform: translateX(+100vw);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
     .project-info {
         align-items: center;
     }

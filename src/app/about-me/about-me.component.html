@@ -16,7 +16,7 @@
                 <img src="assets/img/bulb-icon.svg" alt="">
                 <span>
                     Although I tend to be more reserved by nature, I highly appreciate teamwork. I actively listen and
-                    engage in exchanging ideas and solutions with fellow developers, designers and project managers to
+                    engage in exchanging ideas and solutions with fellow developers, designers, and project managers to
                     achieve remarkable results together.
 
                 </span>
@@ -32,8 +32,7 @@
 
     </div>
     <div class="container-profile-img2 hide-lower-1400 hide-mobile">
-        <img class="img-profile" src="assets/img/secondPicture.png" alt="">
+        <img [ngClass]="{'blur':isSecondPictureScrolledIntoView}" #secondPicture class="img-profile" src="assets/img/secondPicture.png" alt="">
         <div class="line-profile-img2"></div>
     </div>
-
 </section>
