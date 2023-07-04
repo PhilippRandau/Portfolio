@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { ImprintComponent } from './imprint/imprint.component';
 import { HomeComponent } from './home/home.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { SharedService } from 'src/assets/services/shared.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
     BrowserModule,
     CommonModule,
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

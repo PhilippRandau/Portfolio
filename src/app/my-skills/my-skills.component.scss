@@ -17,6 +17,7 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        
 
         span {
             text-align: center;
@@ -25,7 +26,7 @@
 
     img {
         transition: 125ms ease-in-out;
-
+        animation-duration: 1s;
         &:hover {
             transition: 125ms ease-in-out;
             transform: translateY(-10px);

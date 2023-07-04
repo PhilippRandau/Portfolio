@@ -1,4 +1,5 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { SharedService } from 'src/assets/services/shared.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,11 +7,14 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+  constructor(private sharedService: SharedService) {
+    window.addEventListener('scroll', this.checkSkillsIconsInView.bind(this));
+  }
 
   @ViewChild('projects', { static: false }) private projectsElement: ElementRef<HTMLDivElement>;
   isProjectsElementScrolledIntoView: boolean;
-
   @ViewChild('portfolio') portfolioElement!: ElementRef;
+
   projects = [
     {
       name: 'Join',
@@ -28,21 +32,17 @@ export class PortfolioComponent {
       github: 'https://github.com/PhilippRandau/YoukaiRage',
       livetest: 'https://philipp-randau.developerakademie.net/YoukaiRage/index.html'
     },
-  ]
+  ];
+
 
   openPage(link: string) {
     window.location.href = link;
   }
 
 
-  @HostListener('window:scroll', ['$event'])
-  isScrolledIntoView() {
-    if (this.projectsElement) {
-      const rect = this.projectsElement.nativeElement.getBoundingClientRect();
-      const topShown = rect.top >= 0;
-      const bottomShown = rect.bottom <= window.innerHeight;
-      this.isProjectsElementScrolledIntoView = topShown && bottomShown;
-      console.log(this.isProjectsElementScrolledIntoView);
+  checkSkillsIconsInView() {
+    if (!this.isProjectsElementScrolledIntoView) {
+      this.isProjectsElementScrolledIntoView = this.sharedService.isScrolledIntoView(this.projectsElement, this.isProjectsElementScrolledIntoView);
     }
   }
 }

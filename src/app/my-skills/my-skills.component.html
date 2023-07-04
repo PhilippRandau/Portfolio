@@ -6,8 +6,8 @@
 </div>
 <section id="mySkills" #mySkills class="skills-wrapper">
     <div class="ml skills-icons">
-        <div *ngFor="let icon of icons; let i = index">
-            <img src="assets/img/{{ icon }}" alt="skill_icons">
+        <div #skillsIcons *ngFor="let icon of icons; let i = index">
+            <img [ngClass]="{'animate__heartBeat': isSkillsIconsElementScrolledIntoView}" class="" src="assets/img/{{ icon }}" alt="skill_icons">
             <span>{{skills[i]}}</span>
         </div>
     </div>
