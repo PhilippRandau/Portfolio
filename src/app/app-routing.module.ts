@@ -18,7 +18,7 @@ const routes: Routes = [
     anchorScrolling: 'enabled',
     scrollOffset: [
       0,
-      110
+      300
     ]
   }
   )],

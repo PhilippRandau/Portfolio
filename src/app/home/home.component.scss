@@ -1,40 +1,41 @@
-app-reach-me{
+app-reach-me {
     display: flex;
     justify-content: space-between;
     height: 20vh;
 }
 
-app-my-skills{
+app-my-skills {
     display: flex;
     align-items: center;
-    margin-top: 300px;
 }
 
-app-portfolio{
+app-portfolio {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 300px;
 }
 
-app-contact{
+app-contact {
     display: flex;
     flex-direction: column;
-    margin-top: 300px;
 }
 
-@media (max-width:1000px){
 
-    app-reach-me{
+
+@media (max-width:1000px) {
+
+    app-reach-me {
         justify-content: center;
     }
 
-    app-about-me{
+    app-about-me {
         justify-content: center;
     }
 
-    app-my-skills{
+    app-my-skills {
         flex-direction: column-reverse;
     }
 
+   
 }
+

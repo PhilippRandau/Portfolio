@@ -21,7 +21,7 @@ export class HomeComponent implements AfterViewInit {
   public mySkillsOffset: number = null;
   public portfolioOffset: number = null;
   public contactOffset: number = null;
-  private headerOffset: number = 110;
+  private headerOffset: number = 300;
 
   ngAfterViewInit() {
     this.aboutMeOffset = this.aboutMeComponent.aboutMeElement.nativeElement.offsetTop - this.headerOffset;

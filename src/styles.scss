@@ -1,4 +1,5 @@
 @import 'assets/styles/fonts.scss';
+
 html {
   scroll-behavior: smooth;
 }
@@ -78,15 +79,23 @@ app-footer {
   background-color: #141D2F;
 }
 
+.spacing-sections {
+  margin-top: 300px;
+}
+
 @media(max-width:1800px) {
-  h1{
+  h1 {
     font-size: 74px;
   }
 }
 
 @media(max-width:1400px) {
-  h1{
+  h1 {
     font-size: 64px;
+  }
+
+  .spacing-sections {
+    margin-top: 250px;
   }
 }
 
@@ -95,7 +104,7 @@ app-footer {
     display: none !important;
   }
 
-  h1{
+  h1 {
     font-size: 45px;
   }
 
@@ -111,11 +120,21 @@ app-footer {
     flex-direction: column;
     height: 450px;
   }
+
+  .spacing-sections {
+    margin-top: 200px !important;
+  }
 }
 
 @media (min-width: 1000px) {
   .hide-big-screen {
     display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .spacing-sections {
+    margin-top: 125px !important;
   }
 }
 
@@ -125,7 +144,7 @@ app-footer {
   .ml {
     margin-left: 20px;
   }
-  
+
   .mr {
     margin-right: 20px;
   }

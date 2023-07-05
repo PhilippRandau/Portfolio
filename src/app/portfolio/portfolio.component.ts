@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { SharedService } from 'src/assets/services/shared.service';
 
 @Component({
@@ -6,13 +6,14 @@ import { SharedService } from 'src/assets/services/shared.service';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements AfterViewInit {
   constructor(private sharedService: SharedService) {
-    window.addEventListener('scroll', this.checkSkillsIconsInView.bind(this));
+    window.addEventListener('scroll', this.checkPortfolioInView.bind(this));
   }
 
-  @ViewChild('projects', { static: false }) private projectsElement: ElementRef<HTMLDivElement>;
-  isProjectsElementScrolledIntoView: boolean;
+  @ViewChildren('projects') projectElements: QueryList<ElementRef<HTMLDivElement>>;
+  projectElementsArray: ElementRef<HTMLDivElement>[] = [];
+  isProjectsElementScrolledIntoViewArray: Array<boolean> = [];
   @ViewChild('portfolio') portfolioElement!: ElementRef;
 
   projects = [
@@ -34,15 +35,30 @@ export class PortfolioComponent {
     },
   ];
 
-
-  openPage(link: string) {
-    window.location.href = link;
+  ngAfterViewInit() {
+    this.projectElements.forEach((projectsElement, index) => {
+      this.projectElementsArray[index] = projectsElement;
+      this.isProjectsElementScrolledIntoViewArray[index] = false;
+    });
   }
 
+  checkPortfolioInView() {
+    this.projectElementsArray.forEach((ProjectElement, index) => {
+      if (!this.isProjectsElementScrolledIntoViewArray[index]) {
+        this.isProjectsElementScrolledIntoViewArray[index] = this.sharedService.isScrolledIntoView(ProjectElement, this.isProjectsElementScrolledIntoViewArray[index]);
+      }
+    });
+  }
 
-  checkSkillsIconsInView() {
-    if (!this.isProjectsElementScrolledIntoView) {
-      this.isProjectsElementScrolledIntoView = this.sharedService.isScrolledIntoView(this.projectsElement, this.isProjectsElementScrolledIntoView);
+  getAnimationClass(index: number): string {
+    if (this.isProjectsElementScrolledIntoViewArray[index]) {
+      if (index % 2 === 0) {
+        return 'slideInLeft';
+      } else {
+        return 'slideInRight';
+      }
+    } else {
+      return '';
     }
   }
 }
